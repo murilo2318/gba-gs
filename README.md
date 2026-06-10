@@ -90,7 +90,6 @@ Cada módulo é representado por um arquivo `dados_integrados/<modulo>.json` com
 ## Links
 
 - Repositório: https://github.com/murilo2318/gbs-gs
-- Vídeo de demonstração: [INSERIR LINK DO YOUTUBE]
 - Painel: execução local (ver instruções acima)
 
 Integrantes:
