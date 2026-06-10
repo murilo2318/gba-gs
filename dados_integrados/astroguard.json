@@ -1,0 +1,45 @@
+{
+  "modulo": "astroguard",
+  "disciplina": "IoT / Cognitive IoT",
+  "timestamp": "2026-06-10T02:56:37.902662+00:00",
+  "proveniencia": "exemplo",
+  "payload": {
+    "ultima_leitura": {
+      "temperatura": 24.5,
+      "umidade": 55.2,
+      "luminosidade": 1800,
+      "oxigenio": 78,
+      "presenca": true,
+      "noite": false,
+      "estado": "NOMINAL",
+      "airlock": "FECHADO",
+      "modo": "AUTO"
+    },
+    "resumo_estado": {
+      "NOMINAL": 18,
+      "ALERTA": 4,
+      "CRITICO": 1
+    },
+    "eventos_airlock": [
+      {
+        "timestamp": "2026-06-09T20:14:00+00:00",
+        "acao": "FECHAR",
+        "origem": "AUTO",
+        "motivo": "oxigenio abaixo de 60% (O2 critico)"
+      },
+      {
+        "timestamp": "2026-06-09T20:32:00+00:00",
+        "acao": "ABRIR",
+        "origem": "MANUAL",
+        "motivo": "operador assumiu controle via comando MQTT"
+      }
+    ]
+  },
+  "governanca": {
+    "tem_dado_pessoal": true,
+    "decisao_automatizada": true,
+    "tem_hitl": false,
+    "auditavel": false,
+    "observacoes": "PONTO CRITICO: em modo AUTO o sistema fecha o airlock sozinho com base em limiares (ex.: oxigenio abaixo de 60%), sem humano no loop -- decisao automatizada de alto risco para a seguranca da tripulacao. O sensor PIR capta presenca de pessoas, o que configura dado pessoal em um cenario real. Auditoria parcial: a telemetria fica registrada, mas comandos remotos via MQTT nao guardam autoria de quem enviou. Risco de seguranca adicional: o broker MQTT (HiveMQ) e publico e sem autenticacao."
+  }
+}

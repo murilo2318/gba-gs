@@ -1,0 +1,42 @@
+{
+  "modulo": "rag-net-zero",
+  "disciplina": "NLP",
+  "timestamp": "2026-06-10T02:56:37.905808+00:00",
+  "proveniencia": "offline",
+  "payload": {
+    "total_perguntas_avaliadas": 10,
+    "exemplo_pergunta": {
+      "pergunta": "O que e definido como aguas cinzas e quais aparelhos geram esse tipo de efluente?",
+      "resposta_resumida": "Águas cinzas são águas residuais provenientes de pias, chuveiros, máquinas de lavar, pias de cozinha entre outras que não sejam de vasos sanitários, bidês e urinol [Fonte: Sistema de Reuso de Aguas Cinzas - Estudo de Caso (UTFPR) | UTFPR - Repositorio | categoria: manual | ano: 2018].\n\nOs seguintes aparelhos geram águas cinzas:\n- Pias\n- Chuveiros \n- Máquinas de lavar louças [Fonte: Sistema de Reus...",
+      "fontes_citadas": [
+        {
+          "titulo": "Sistema de Reuso de Aguas Cinzas - Estudo de Caso (UTFPR)",
+          "fonte": "UTFPR - Repositorio",
+          "score": 0.8649
+        },
+        {
+          "titulo": "Aproveitamento de Aguas Pluviais e Reuso de Aguas Cinzas - Padroes de Qualidade",
+          "fonte": "ADASA - Distrito Federal",
+          "score": 0.8597
+        },
+        {
+          "titulo": "Reuso de Aguas Cinzas em Edificacoes (UFRGS)",
+          "fonte": "UFRGS - Lume Repositorio",
+          "score": 0.8543
+        }
+      ]
+    },
+    "categorias_corpus": {
+      "agua": 3,
+      "energia": 6,
+      "geral": 4
+    }
+  },
+  "governanca": {
+    "tem_dado_pessoal": false,
+    "decisao_automatizada": false,
+    "tem_hitl": true,
+    "auditavel": true,
+    "observacoes": "RAG 100% local via Ollama (privacy by design): nenhum trecho de documento e enviado a API externa. Auditavel via outputs/avaliacao.json, que registra pergunta, resposta e fontes recuperadas. HITL existe apenas na etapa de avaliacao das respostas (revisao humana do avaliacao.json), nao em tempo de execucao do assistente. Vies de corpus documentado: corpus tem mais documentos sobre energia do que sobre agua, o que pode enviesar respostas comparativas."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "modulo": "quantica-mythos",
+  "disciplina": "Computacao Quantica",
+  "timestamp": "2026-06-10T02:56:37.903749+00:00",
+  "proveniencia": "offline",
+  "payload": {
+    "n_total_dataset": 21912,
+    "taxa_evento_extremo": 0.043857247170500185,
+    "coorte": 500,
+    "treino_quantico_pos_smote": 252,
+    "teste": 150,
+    "n_qubits": 4,
+    "tabela": [
+      {
+        "modelo": "QSVC (quântico)",
+        "AUC_ROC": 0.4563,
+        "F1": 0.3333,
+        "Acuracia": 0.4933,
+        "Precisao": 0.2754,
+        "Recall": 0.4222,
+        "Tempo_treino_s": 39.7559,
+        "Tempo_infer_ms": 358.73
+      },
+      {
+        "modelo": "VQC (quântico)",
+        "AUC_ROC": 0.4802,
+        "F1": 0.3471,
+        "Acuracia": 0.4733,
+        "Precisao": 0.2763,
+        "Recall": 0.4667,
+        "Tempo_treino_s": 24.6045,
+        "Tempo_infer_ms": 1.2754
+      },
+      {
+        "modelo": "SVM-RBF (clássico)",
+        "AUC_ROC": 0.7257,
+        "F1": 0.4762,
+        "Acuracia": 0.6333,
+        "Precisao": 0.4167,
+        "Recall": 0.5556,
+        "Tempo_treino_s": 0.0065,
+        "Tempo_infer_ms": 0.0086
+      },
+      {
+        "modelo": "Random Forest (clássico)",
+        "AUC_ROC": 0.6889,
+        "F1": 0.5051,
+        "Acuracia": 0.6733,
+        "Precisao": 0.463,
+        "Recall": 0.5556,
+        "Tempo_treino_s": 0.2914,
+        "Tempo_infer_ms": 0.0541
+      }
+    ],
+    "melhor_classico": {
+      "modelo": "SVM-RBF (clássico)",
+      "AUC_ROC": 0.7257,
+      "F1": 0.4762,
+      "Acuracia": 0.6333,
+      "Precisao": 0.4167,
+      "Recall": 0.5556,
+      "Tempo_treino_s": 0.0065,
+      "Tempo_infer_ms": 0.0086
+    },
+    "melhor_quantico": {
+      "modelo": "VQC (quântico)",
+      "AUC_ROC": 0.4802,
+      "F1": 0.3471,
+      "Acuracia": 0.4733,
+      "Precisao": 0.2763,
+      "Recall": 0.4667,
+      "Tempo_treino_s": 24.6045,
+      "Tempo_infer_ms": 1.2754
+    }
+  },
+  "governanca": {
+    "tem_dado_pessoal": false,
+    "decisao_automatizada": true,
+    "tem_hitl": false,
+    "auditavel": true,
+    "observacoes": "Transparencia critica anti 'quantum-washing': os resultados mostram desempenho inferior dos modelos quanticos (QSVC e VQC, AUC_ROC ~0.46-0.48) em relacao aos modelos classicos (SVM-RBF AUC_ROC ~0.73), e isso e reportado de forma explicita em vez de ser omitido. Decisao automatizada (classificacao de chuva extrema) e reprodutivel: seed fixa e metricas registradas em results.json."
+  }
+}

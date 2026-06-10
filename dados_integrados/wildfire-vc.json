@@ -1,0 +1,31 @@
+{
+  "modulo": "wildfire-vc",
+  "disciplina": "Visao Computacional",
+  "timestamp": "2026-06-10T02:56:37.903986+00:00",
+  "proveniencia": "exemplo",
+  "payload": {
+    "classes": [
+      "Wildfire",
+      "No Wildfire"
+    ],
+    "metricas_exemplo": {
+      "accuracy": 0.93,
+      "precision": 0.91,
+      "recall": 0.89,
+      "f1": 0.9,
+      "auc": 0.96
+    },
+    "exemplo_classificacao": {
+      "imagem": "wildfire_0021.jpg",
+      "classe_predita": "Wildfire",
+      "probabilidade": 0.94
+    }
+  },
+  "governanca": {
+    "tem_dado_pessoal": false,
+    "decisao_automatizada": true,
+    "tem_hitl": false,
+    "auditavel": false,
+    "observacoes": "HITL e logging das decisoes de classificacao sao mencionados na proposta do projeto, mas NAO estao implementados no notebook atual -- por isso tem_hitl=false e auditavel=false refletem o estado real. Vies de classes mitigado parcialmente via class_weight balanceado no treino. Para este caso de uso, o falso negativo (classificar uma imagem com incendio real como 'No Wildfire') e o erro mais grave, pois atrasa a resposta a um evento critico."
+  }
+}

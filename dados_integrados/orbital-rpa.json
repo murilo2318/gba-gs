@@ -1,0 +1,68 @@
+{
+  "modulo": "orbital-rpa",
+  "disciplina": "AI for RPA",
+  "timestamp": "2026-06-10T02:56:37.902007+00:00",
+  "proveniencia": "exemplo",
+  "payload": {
+    "total_eventos": 5,
+    "eventos_por_prioridade": {
+      "Alta": 2,
+      "Media": 2,
+      "Baixa": 1
+    },
+    "top_eventos": [
+      {
+        "event_id": "EONET-EXEMPLO-001",
+        "title": "Wildfire monitoring sample in South America",
+        "category": "Wildfires",
+        "risk_score": 95,
+        "priority": "Alta",
+        "audit_reason": "Prioridade Alta: evento da categoria Wildfires, a cerca de 850 km da posicao atual da ISS."
+      },
+      {
+        "event_id": "EONET-EXEMPLO-002",
+        "title": "Severe storm monitoring sample in Atlantic region",
+        "category": "Severe Storms",
+        "risk_score": 80,
+        "priority": "Alta",
+        "audit_reason": "Prioridade Alta: evento da categoria Severe Storms, a cerca de 1900 km da posicao atual da ISS."
+      },
+      {
+        "event_id": "EONET-EXEMPLO-003",
+        "title": "Volcano monitoring sample in Pacific region",
+        "category": "Volcanoes",
+        "risk_score": 50,
+        "priority": "Media",
+        "audit_reason": "Prioridade Media: evento da categoria Volcanoes, a cerca de 4200 km da posicao atual da ISS."
+      },
+      {
+        "event_id": "EONET-EXEMPLO-004",
+        "title": "Dust and haze sample over arid region",
+        "category": "Dust and Haze",
+        "risk_score": 45,
+        "priority": "Media",
+        "audit_reason": "Prioridade Media: evento da categoria Dust and Haze, a cerca de 4800 km da posicao atual da ISS."
+      },
+      {
+        "event_id": "EONET-EXEMPLO-005",
+        "title": "Sea and lake ice sample near polar circle",
+        "category": "Sea and Lake Ice",
+        "risk_score": 15,
+        "priority": "Baixa",
+        "audit_reason": "Prioridade Baixa: evento da categoria Sea and Lake Ice, a cerca de 9000 km da posicao atual da ISS."
+      }
+    ],
+    "posicao_iss": {
+      "latitude": -12.5,
+      "longitude": -50.0,
+      "altitude_km": 420.0
+    }
+  },
+  "governanca": {
+    "tem_dado_pessoal": false,
+    "decisao_automatizada": true,
+    "tem_hitl": true,
+    "auditavel": true,
+    "observacoes": "Decisao automatizada por regras explicaveis (risk_score = categoria + distancia ate a ISS + numero de fontes), mas o robo nao decide sozinho: gera uma fila priorizada para revisao humana (HITL por design). Auditavel via audit_log.json, que registra a justificativa (audit_reason) de cada item. O unico dado pessoal presente no projeto e o RM dos autores, citado no codigo-fonte do notebook, e nao faz parte dos dados processados."
+  }
+}

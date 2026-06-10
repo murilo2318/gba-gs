@@ -1,0 +1,113 @@
+{
+  "modulo": "neurospace-alert",
+  "disciplina": "Computacao Neuromorfica",
+  "timestamp": "2026-06-10T02:56:37.903211+00:00",
+  "proveniencia": "offline",
+  "payload": {
+    "dataset_rows": 61,
+    "primeira_atencao_real_min": 155,
+    "primeira_critica_real_min": 200,
+    "recomendado": {
+      "grupo": "Alterado",
+      "ajuste": "Ajuste_B_equilibrado_alterado",
+      "V_limiar": 29,
+      "taxa_chaveamento": 0.005,
+      "primeiro_LED_nao_apagado_min": 210,
+      "primeiro_LED_vermelho_min": 235,
+      "estado_memristor_final": 0.98,
+      "LED_final": "VERMELHO"
+    },
+    "resumos": [
+      {
+        "grupo": "Original",
+        "ajuste": "Ajuste_A_sensivel",
+        "V_limiar": 24,
+        "taxa_chaveamento": 0.006,
+        "primeiro_LED_nao_apagado_min": 170,
+        "primeiro_LED_vermelho_min": 190,
+        "estado_memristor_final": 1.0,
+        "LED_final": "VERMELHO"
+      },
+      {
+        "grupo": "Original",
+        "ajuste": "Ajuste_B_equilibrado",
+        "V_limiar": 28,
+        "taxa_chaveamento": 0.005,
+        "primeiro_LED_nao_apagado_min": 205,
+        "primeiro_LED_vermelho_min": 225,
+        "estado_memristor_final": 0.991,
+        "LED_final": "VERMELHO"
+      },
+      {
+        "grupo": "Original",
+        "ajuste": "Ajuste_C_conservador",
+        "V_limiar": 32,
+        "taxa_chaveamento": 0.004,
+        "primeiro_LED_nao_apagado_min": 245,
+        "primeiro_LED_vermelho_min": 280,
+        "estado_memristor_final": 0.786,
+        "LED_final": "VERMELHO"
+      },
+      {
+        "grupo": "Alterado",
+        "ajuste": "Ajuste_A_sensivel_alterado",
+        "V_limiar": 25,
+        "taxa_chaveamento": 0.006,
+        "primeiro_LED_nao_apagado_min": 180,
+        "primeiro_LED_vermelho_min": 195,
+        "estado_memristor_final": 1.0,
+        "LED_final": "VERMELHO"
+      },
+      {
+        "grupo": "Alterado",
+        "ajuste": "Ajuste_B_equilibrado_alterado",
+        "V_limiar": 29,
+        "taxa_chaveamento": 0.005,
+        "primeiro_LED_nao_apagado_min": 210,
+        "primeiro_LED_vermelho_min": 235,
+        "estado_memristor_final": 0.98,
+        "LED_final": "VERMELHO"
+      },
+      {
+        "grupo": "Alterado",
+        "ajuste": "Ajuste_C_conservador_alterado",
+        "V_limiar": 33,
+        "taxa_chaveamento": 0.004,
+        "primeiro_LED_nao_apagado_min": 260,
+        "primeiro_LED_vermelho_min": 300,
+        "estado_memristor_final": 0.67,
+        "LED_final": "VERMELHO"
+      }
+    ],
+    "comparacao": [
+      {
+        "ajuste": "A",
+        "original": "Ajuste_A_sensivel",
+        "alterado": "Ajuste_A_sensivel_alterado",
+        "delta_LED_nao_apagado_min": 10,
+        "delta_LED_vermelho_min": 5
+      },
+      {
+        "ajuste": "B",
+        "original": "Ajuste_B_equilibrado",
+        "alterado": "Ajuste_B_equilibrado_alterado",
+        "delta_LED_nao_apagado_min": 5,
+        "delta_LED_vermelho_min": 10
+      },
+      {
+        "ajuste": "C",
+        "original": "Ajuste_C_conservador",
+        "alterado": "Ajuste_C_conservador_alterado",
+        "delta_LED_nao_apagado_min": 15,
+        "delta_LED_vermelho_min": 20
+      }
+    ]
+  },
+  "governanca": {
+    "tem_dado_pessoal": false,
+    "decisao_automatizada": true,
+    "tem_hitl": false,
+    "auditavel": true,
+    "observacoes": "Decisao automatizada: o LED de alerta (NOMINAL/ALERTA/CRITICO) e acionado por um limiar de tensao (V_limiar) fixo, sem revisao humana antes do acionamento. Os limiares sao definidos por design da equipe, o que representa um vies de design embutido no sistema. Auditavel: tabelas comparativas (ajuste original vs. alterado) registram o efeito de cada calibracao testada."
+  }
+}

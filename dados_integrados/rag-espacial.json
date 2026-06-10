@@ -1,0 +1,31 @@
+{
+  "modulo": "rag-espacial",
+  "disciplina": "IA Generativa",
+  "timestamp": "2026-06-10T02:56:37.904395+00:00",
+  "proveniencia": "exemplo",
+  "payload": {
+    "pergunta_exemplo": "Como satelites ajudam no monitoramento de queimadas e desastres?",
+    "resposta_exemplo": "Satelites de observacao da Terra monitoram queimadas e desastres naturais ao detectar focos de calor, fumaca e mudancas na cobertura vegetal em grandes areas, com revisitas frequentes. Essas informacoes ajudam orgaos de defesa civil e equipes agricolas a priorizar regioes para resposta rapida.",
+    "fontes": [
+      {
+        "origem": "satelites_monitoramento.txt",
+        "distancia": 0.18
+      },
+      {
+        "origem": "agricultura_clima_desastres.txt",
+        "distancia": 0.27
+      }
+    ],
+    "documentos_indexados": [
+      "agricultura_clima_desastres.txt",
+      "satelites_monitoramento.txt"
+    ]
+  },
+  "governanca": {
+    "tem_dado_pessoal": true,
+    "decisao_automatizada": false,
+    "tem_hitl": false,
+    "auditavel": false,
+    "observacoes": "PONTO CRITICO (LGPD): o assistente permite upload livre de documentos pelo usuario e envia trechos desses documentos para uma API de terceiro na nuvem (Groq/OpenAI) para gerar a resposta -- sem controle sobre o conteudo enviado nem logging persistente das consultas. E um assistente de apoio a decisao (nao toma decisao automatizada). Vies linguistico: os embeddings tem melhor desempenho em ingles, o que pode reduzir a qualidade da recuperacao para conteudo em portugues."
+  }
+}

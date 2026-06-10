@@ -1,0 +1,86 @@
+{
+  "modulo": "agrosentinel",
+  "disciplina": "Front-End & Mobile",
+  "timestamp": "2026-06-10T02:56:37.904137+00:00",
+  "proveniencia": "exemplo",
+  "payload": {
+    "risco_por_estado": [
+      {
+        "estado": "MT",
+        "risk_label": "Critico",
+        "risk_score": 0.91,
+        "lat": -12.64,
+        "lon": -55.42,
+        "area_agr": 17500
+      },
+      {
+        "estado": "PA",
+        "risk_label": "Alto",
+        "risk_score": 0.78,
+        "lat": -3.41,
+        "lon": -52.29,
+        "area_agr": 3200
+      },
+      {
+        "estado": "MS",
+        "risk_label": "Alto",
+        "risk_score": 0.72,
+        "lat": -20.51,
+        "lon": -54.54,
+        "area_agr": 5200
+      },
+      {
+        "estado": "SP",
+        "risk_label": "Moderado",
+        "risk_score": 0.45,
+        "lat": -22.28,
+        "lon": -48.73,
+        "area_agr": 5800
+      },
+      {
+        "estado": "MG",
+        "risk_label": "Baixo",
+        "risk_score": 0.18,
+        "lat": -18.51,
+        "lon": -44.55,
+        "area_agr": 5500
+      }
+    ],
+    "alertas": [
+      {
+        "id": "a1b2c3d4",
+        "estado": "MT",
+        "risk_label": "Critico",
+        "mensagem": "Risco critico de queimada detectado em MT. 320 focos ativos com temperatura de 36.5C e umidade de 18%.",
+        "acoes": [
+          "Acionar Corpo de Bombeiros e Defesa Civil estadual",
+          "Emitir alerta para produtores rurais da regiao",
+          "Suspender queimadas controladas autorizadas"
+        ],
+        "criado_em": "2026-06-09"
+      },
+      {
+        "id": "e5f6a7b8",
+        "estado": "PA",
+        "risk_label": "Alto",
+        "mensagem": "Risco alto em PA. NDVI de 0.32 indica vegetacao estressada. Precipitacao acumulada de apenas 12 mm no periodo.",
+        "acoes": [
+          "Notificar Defesa Civil sobre risco elevado",
+          "Intensificar patrulhamento em areas de preservacao"
+        ],
+        "criado_em": "2026-06-09"
+      }
+    ],
+    "decisoes_hitl_exemplo": {
+      "a1b2c3d4": "confirmado",
+      "e5f6a7b8": "pendente"
+    }
+  },
+  "governanca": {
+    "tem_dado_pessoal": false,
+    "decisao_automatizada": true,
+    "tem_hitl": true,
+    "auditavel": false,
+    "observacoes": "O loop HITL existe na interface (o usuario pode confirmar ou descartar cada alerta), mas as decisoes ficam apenas em st.session_state -- nao ha persistencia em disco nem trilha de auditoria entre sessoes, por isso auditavel=false. O modelo de risco (RandomForest) e treinado com dados sinteticos, sem validacao de vies contra dados reais de campo. O painel nao possui controle de acesso por usuario."
+  }
+}
